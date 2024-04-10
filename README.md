@@ -2,6 +2,6 @@ Rock-paper-scissors web application with real-time gesture recognition using a t
 
 run `pip install tensorflow tensorflow-datasets opencv-python flask` to install required libraries
 
-train the model by running `python model.py'
+train the model by running `python model.py`
 
 run the web application on local browser: `python app.py`
