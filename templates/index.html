@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <video id="video_feed" autoplay></video>
+
+    <script>
+        var video = document.getElementById('video_feed');
+
+        if (navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    video.srcObject = stream;
+                })
+                .catch(function (error) {
+                    console.error('Error accessing webcam:', error);
+                });
+        }
+
+        setInterval(() => {
+            video.play();
+        }, 100);
+
+    </script>
+    <img id="gesture" src="/static/rock.png" width="150" height="150" alt="Gesture">
+</body>
+</html>
